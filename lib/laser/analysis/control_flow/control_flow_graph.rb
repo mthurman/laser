@@ -57,7 +57,7 @@ module Laser
         
         def dup
           copy = self.class.new
-          copy.initialize_dup(self)
+          copy.send(:initialize_dup, self)
           copy
         end
         
